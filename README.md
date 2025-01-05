@@ -121,6 +121,23 @@ the new C11 header file <threads.h>
 
 however, it is widely not supported on windows and thus we will be learning aboud <pthread.h> instead (posix compliant)
 
+# Lesson 3 : Installing the C Compiler
+
+## 1. Windows
+
+Download cygwin to: https://cygwin.com/install.html<br>
+Checked bin in packages: gcc-core, gdb, make<br>
+Create PATH: Copy path: C:\cygwin64\bin to ThisPC->Properties->Advanced system settings->Advanced->Environment Variables...->System variables->Path->Edit->New->Paste(C:\cygwin64\bin)->OK<br>
+Installing CodeLite
+
+## 2. Mac
+
+Go to AppStore->Develop->XCode->GET<br>
+Utilites->Terminal then input "which gcc" -> input "gcc --version" -> install -> input "vi test.c" -> input "gcc test.c" -> input "./a.out"
+
+## 3. Ubuntu Linux
+
+
 
 
 
