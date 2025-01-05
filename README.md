@@ -22,7 +22,7 @@ so, we do not focus on many of the additions added for C99
 - this is why the focus is mainly on C89.
 C89 is almost universally supported.
 
-# 3. New features added that we will use
+## 3. New features added that we will use
 
 macros with a variable number of arguments
 
@@ -59,6 +59,70 @@ for (i = 0; i < 10, i++)
 
 new in C99 (variable can be declared anywhere)<br>
 for(int i = 0; i < 10; i++)
+
+# Lesson 2 : C11 Standard
+
+## 1. Overview
+
+We have not really focused on any C11 concepts up to this point
+
+Features added to C11 were for more advanced concepts
+- multithreading support
+- safer standard libraries
+- better compliance with other industry standards
+
+the standard also attempts to fix some issues presented in C99
+- some mandatory features are optional (variable lenth arrays and complex types)
+
+also focuses on better compatibility with C++ as much as possible
+
+I want it to be clear that we may touch on some concepts from C11 in this class, but, it will be minial
+
+## 2. Overview (cont'd)
+
+C11 standardizes many features that have already been available in common contemporary implementations
+
+defines a memory model that better suits multithreading
+
+fixes problems with the C99 standard
+- some of its mandatory features proved difficult to implement in some platforms
+- politics also played a role : cooperation between the C and C++ standards committees in the late 1990s was lacking
+- design mistakes of C99 were avoided in C11
+
+focuses on security (such as the string manipulation functions and input/output)
+- a new set of safer standard functions that aim to replace the traditional unsafe functions: bounds checking functions : that begin or end with _s (strcat_s, strcpy_s, etc)
+- removal of the gets function
+- optional to the standard (will not focus on due to most compilers not supporting)
+
+## 3. Topics we will address in this class
+
+suport for anonymous structs and unions
+- has neither a tag name nor a typedef name
+- useful when unions and structures are nested
+
+static assertions
+- evaluated during translations at a later phase than #if and #error
+- let you catch errors that are impossible to detect during the preprocessing phase
+
+no-return functions
+- declares a function that does not return
+- suppresses compiler warnings on a function that doesn't return
+- enables certain optimizations that are allowed only on functions that don't return
+
+## 4. Multithreading
+
+the biggest change in C11 is its standardized multithreading support
+
+C has supported multithreading for decades
+- however, all of the popular C threading libraries have thus far been non-standard extensions, and hence non-portable
+
+the new C11 header file <threads.h>
+- declares functions for creating and managing threads, mutexes, condition variables
+
+however, it is widely not supported on windows and thus we will be learning aboud <pthread.h> instead (posix compliant)
+
+
+
 
 
 
